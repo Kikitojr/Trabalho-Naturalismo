@@ -1,14 +1,26 @@
-#container-baixo {
-  background-color: #a3cfbb;
-  margin: 0 auto;
-  width: 80%;/*900px*/
-  height: 450px;
-  border: 1px solid red
-}
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
 
-#autores{
-    border: 1px solid red;
-    margin: 80px 20px 50px 20px;
-    width: 420px;
-    height: 350px;
-}
+  .card img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 1; /* Alterado para manter a descrição sempre visível */
+  }
