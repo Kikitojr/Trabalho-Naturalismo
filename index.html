@@ -9,27 +9,6 @@
     <link rel="stylesheet" href="./assets/css/alison.css">
 </head>
 <body>
-
-    <!--* NavBar -->
-    <header>
-
-        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-    </header>
     
     <!--* Slides -->
     <section>
@@ -37,13 +16,16 @@
         <div id="slides" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./assets/imgs/slide-1.jpg" class="imgs">
+                    <img src="./assets/imgs/mulheres-trabalhadoras.jpg" class="imgs">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/imgs/slide-2.jpg" class="imgs">
+                    <img src="./assets/imgs/homem-trabalhando.jpg" class="imgs">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/imgs/slide-3.jpg" class="imgs">
+                    <img src="./assets/imgs/pobres.jpg" class="imgs">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/imgs/cansados.jpg" class="imgs">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#slides" data-bs-slide="prev">
@@ -65,8 +47,8 @@
         <div class="container">
             <h2 class="text-center my-4">Introdução</h2>
             <p class="text-justify fs-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, vero! Eligendi a, libero doloremque qui aut quasi
-                eveniet, molestias rerum consequuntur consectetur neque ab, praesentium maiores quam voluptatem autem? Iusto.
+                O Naturalismo é um movimento literário que surgiu no século XIX como uma extensão do Realismo, buscando retratar a
+                realidade de maneira objetiva e detalhada, muitas vezes enfocando aspectos mais brutos e críticos da condição humana.
             </p>
         </div>
 
@@ -78,31 +60,49 @@
         <div class="container">
 
             <h2 class="text-center my-4">Principais Características</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./assets/imgs/slide-1.jpg" class="img-fluid rounded">
+
+            <br>
+
+            <div class="row d-flex">
+                <div class="col-md-6 order-sm-1 order-md-0">
+                    <img src="./assets/imgs/xadrex.jpg" class="img-fluid rounded">
                 </div>
-                <div class="col-md-6">
-                    <h3 class="text-center">Característica</h3>
-                    <p class="text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, perferendis eaque incidunt quis rem porro illum sequi
-                        laudantium ad odit. Natus fugiat quaerat totam veritatis, repellendus fugit deserunt necessitatibus similique!
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center order-md-1 order-sm-0">
+                    <h3 class="text-center">Influência Científica na Caracterização de Personagens</h3>
+                    <p class="text-justify text-center">
+                        Autores usaram teorias científicas, como o determinismo, para moldar características de personagens, destacando
+                        influências raciais e contextuais.
                     </p>
                 </div>
             </div>
 
             <br>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="text-center">Característica</h3>
-                    <p class="text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, perferendis eaque incidunt quis rem porro illum sequi
-                        laudantium ad odit. Natus fugiat quaerat totam veritatis, repellendus fugit deserunt necessitatibus similique!
+            <div class="row d-flex">
+                <div class="col-md-6 order-sm-1 order-md-1">
+                    <img src="./assets/imgs/pobres.jpg" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center order-md-0 order-sm-0">
+                    <h3 class="text-center">Ênfase em Características Biológicas e Sexuais</h3>
+                    <p class="text-justify text-center">
+                        Características biológicas foram priorizadas sobre aspectos psicológicos, resultando em "zoomorfização" e
+                        exploração da sexualidade instintiva dos personagens.
                     </p>
                 </div>
-                <div class="col-md-6">
-                    <img src="./assets/imgs/slide-2.jpg" class="img-fluid rounded">
+            </div>
+
+            <br>
+
+            <div class="row d-flex">
+                <div class="col-md-6 order-sm-1 order-md-0">
+                    <img src="./assets/imgs/mulheres-trabalhadoras.jpg" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center order-md-1 order-sm-0">
+                    <h3 class="text-center">Preconceitos nas Obras Naturalistas</h3>
+                    <p class="text-justify text-center">
+                        Obras revelam preconceitos, retratando mulheres com sexualidade patológica, negros como inferiores e
+                        homossexualidade como desvio da norma.
+                    </p>
                 </div>
             </div>
 
@@ -120,7 +120,7 @@
           </div>
         </div>
     </section>
-    
+
     <script src="./assets/js/card.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
 </body>
