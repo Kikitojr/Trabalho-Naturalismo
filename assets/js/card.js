@@ -1,59 +1,63 @@
-const card1 = document.getElementById("card");
-let isImage1 = true;
-
-card1.addEventListener("click", function() {
-  const img = card1.querySelector("img");
-  const cardContent = card1.querySelector(".card-content");
-
-  if (isImage1) {
-    img.src = "./assets/imgs/germinal-emili-zola.jpg"; // Segunda imagem
-    cardContent.innerHTML = "<h2>Germinal</h2><p>Germinal, obra-prima de Émile Zola, mergulha nas vidas dos mineiros durante a Revolução Industrial na França. O livro revela as lutas, injustiças e a busca por dignidade em meio às condições brutais das minas. Uma narrativa poderosa sobre a resistência e a esperança no cenário implacável da época.</p>";
-    card1.classList.remove("card-hover");
-  } else {
-    img.src = "./assets/imgs/emili-2.jpg"; // Primeira imagem
-    cardContent.innerHTML = "<h2>Emilí Zola</h2>";
-    card1.classList.add("card-hover");
+const autores = [
+  {
+    "nome": "Emilí Zola",
+    "card": $("#card-emili"),
+    "foto": "./assets/imgs/autores/emili.jpg",
+    "foto_obra": "./assets/imgs/obras/emili.jpg",
+    "obra_exibida": false,
+    "descricao": `
+      "Germinal": Importante no naturalismo europeu, retrata a vida penosa dos mineiros de
+      carvão no século XIX na França, explorando suas condições precárias e miséria.
+    `,
+  },
+  {
+    "nome": "Aluisio Azevedo",
+    "card": $("#card-aluisio"),
+    "foto": "./assets/imgs/autores/aluisio.jpg",
+    "foto_obra": "./assets/imgs/obras/aluisio.jpg",
+    "obra_exibida": false,
+    "descricao": `
+      "O Cortiço": Obra principal do autor, lançada em 1890, retrata
+      vida nos cortiços de forma realista e influências sociais,
+      biológicas e psicológicas nos personagens.
+    `,
+  },
+  {
+    "nome": "Thomas Hardy",
+    "card": $("#card-thomas"),
+    "foto": "./assets/imgs/autores/thomas.jpg",
+    "foto_obra": "./assets/imgs/obras/thomas.jpg",
+    "obra_exibida": false,
+    "descricao": `
+      "Tess of the d'Urbervilles": A vida de Tess, camponesa descendente de
+      nobres arruinados, aborda classe social, sexualidade e desafios na sociedade.
+    `,
   }
+];
 
-  isImage1 = !isImage1;
-});
+$(".card-body").hide();
 
-const card2 = document.getElementById("card2");
-let isImage2 = true;
+$(".card").click(function () {
 
-card2.addEventListener("click", function() {
-  const img = card2.querySelector("img");
-  const cardContent = card2.querySelector(".card-content");
+  const id = $(this).attr("id");
+  const autor = autores.find(autor => autor.card.attr("id") === id);
 
-  if (isImage2) {
-    img.src = "./assets/imgs/cortiço-aluisio.jpg"; // Segunda imagem
-    cardContent.innerHTML = "<h2>O Cortiço</h2><p>O Cortiço, de Aluísio Azevedo, adentra as habitações coletivas do Rio de Janeiro do século XIX, revelando desigualdades sociais e conflitos raciais. A obra expõe as complexas lutas por sobrevivência no cortiço, explorando o impacto do ambiente adverso na vida de seus habitantes e suas trajetórias moldadas pelas circunstâncias.</p>";
-    card2.classList.remove("card-hover");
-  } else {
-    img.src = "./assets/imgs/Aluisio-Azevedo (2).jpg"; // Primeira imagem
-    cardContent.innerHTML = "<h2>Aluisio Azevedo</h2>";
-    card2.classList.add("card-hover");
+  autor.card.find(".click-me").hide();
+
+  if (!autor.obra_exibida) {
+    autor.card.find(".card-img-top").attr("src", autor["foto_obra"]);
+    autor.card.find(".card-title").text('');
+    autor.card.find(".card-shadow").hide();
+    autor.card.find(".card-body").text(autor["descricao"]);
+    autor.card.find(".card-body").show();
+    autor.obra_exibida = true;
+  }else {
+    autor.card.find(".card-img-top").attr("src", autor["foto"]);
+    autor.card.find(".card-title").text(autor["nome"]);
+    autor.card.find(".card-shadow").show();
+    autor.card.find(".card-body").text('');
+    autor.card.find(".card-body").hide();
+    autor.obra_exibida = false;
   }
-
-  isImage2 = !isImage2;
-});
-
-const card3 = document.getElementById("card3");
-let isImage3 = true;
-
-card3.addEventListener("click", function() {
-  const img = card3.querySelector("img");
-  const cardContent = card3.querySelector(".card-content");
-
-  if (isImage3) {
-    img.src = "./assets/imgs/obra-do-thomas.jpg"; // Segunda imagem
-    cardContent.innerHTML = "<h2>Tess of the D'Urbervilles</h2><p>Tess of the D'Urbervilles,segue a vida de Tess, explorando sua jornada na sociedade vitoriana. A obra aborda sua luta contra um passado trágico, expectativas sociais e limitações de gênero. Uma narrativa que toca moralidade, destino e injustiça, pintando um retrato profundo das complexidades humanas e das forças que moldam sua trajetória.</p>";
-    card3.classList.remove("card-hover");
-  } else {
-    img.src = "./assets/imgs/thomas-hardy.jpg"; // Primeira imagem
-    cardContent.innerHTML = "<h2>Thomas Hardy</h2>";
-    card3.classList.add("card-hover");
-  }
-
-  isImage3 = !isImage3;
+    
 });
