@@ -1,26 +1,111 @@
-  .card {
+/* styles.css */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0.7;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+  .local-finger{
     position: relative;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
+    left: 695px;
+    top: 130px;
+    z-index: 1000;
+  }
+  .local-finger2{
+    position: relative;
+    left: 695px;
+    top: 50px;
+    z-index: 1000;
+  }
+  .local-finger3{
+    position: relative;
+    left: 695px;
+    top: 50px;
+    z-index: 1000;
   }
 
-  .card img {
-    width: 100%;
-    height: auto;
-    vertical-align: top;
-  }
+  /*Galeria de obras*/
+#container-obras{
+  border: 2px solid #000;
+  margin: 0 auto;
+  width: 1000px;
+  height: 575px;
+  color: black;
+}
 
-  .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    opacity: 1; /* Alterado para manter a descrição sempre visível */
-  }
+#obra-1{
+  border: 2px solid #000;
+  position: relative;
+  left: 20px;
+  top: 30px;
+  width: 270px;
+  height: 250px;
+}
+#obra-2{
+  border: 2px solid #000;
+  position: relative;
+  top: 50px;
+  left: 20px;
+  width: 270px;
+  height: 250px;
+}
+#obra-3{
+  border: 2px solid #000;
+  position: relative;
+  left: 360px;
+  bottom: 470px;
+  width: 270px;
+  height: 250px;
+}
+
+#obra-4{
+  border: 2px solid #000;
+  position: relative;
+  margin-top: 20px;
+  left: 360px;
+  bottom: 470px;
+  width: 270px;
+  height: 250px;
+}
+#obra-5{
+  border: 2px solid #000;
+  position: relative;
+  left: 710px;
+  bottom: 990px;
+  width: 270px;
+  height: 250px;
+}
+#obra-6{
+  border: 2px solid #000;
+  position: relative;
+  left: 710px;
+  bottom: 970px;
+  width: 270px;
+  height: 250px;
+}
